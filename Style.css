@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background-color: #1a1a1a;
+}
+
+header {
+   
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+}
+
+.choice li a:hover:not(.active){
+    color: #fff;
+    font-weight: bold;
+}
+
+.choice li a.active{
+    color: #0055b9;
+    font-weight: bold;
+}
+
+.join-btn {
+    background-color: #fff;
+    color: #000;
+    padding: 17px 35px;
+    font-weight: bold;
+    border-radius: 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.join-btn:hover {
+    background-color: #0055b9;
+    color: #fff;
+}
+
+.hero-content {
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: bold;
+    margin-top: 180px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #0055b9;
+    color: #fff;
+}
+
+
+.membership-plans {
+    text-align: center;
+    background-color: #1a1a1a;
+    height: 100vh;
+}
+
+.membership-plans h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 90px;
+    text-shadow: 2px 2px 8px rgba(0, 78, 196, 40);
+    -webkit-text-stroke: 1px #000;
+    padding-top: 15px;
+}
+
+.membership-plans h3 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px; /* Adjusted max-width to fit more plans */
+    margin: 0 auto;
+}
+
+/* Individual Plan */
+.plan {
+    background-color:#ffffff;
+    border: 2px solid #000000;
+    padding: 60px;
+    width: 300px; /* Adjusted width to fit better */
+    margin: 30px; /* Added consistent spacing */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.plan:hover {
+    transform: scale(1.2); /* Subtle hover effect */
+}
+
+/* Plan Price */
+.plan-price h4 {
+    color:#000000;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.plan-price p {
+    color: #000000;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Plan Details */
+.plan h5 {
+    color: #000000;
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plan ul li {
+    color: #000000;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Highlighted Plan */
+.highlight {
+    background-color:#0055b9;
+    color: #1a1a1a;
+    border-color: #0055b9;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 2px solid #000000;
+    margin-bottom: 10x;
+}
+
+.highlight h5,
+.highlight ul li {
+    color: #1a1a1a;
+}
+
+/* Signup Button */
+.signup-btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-btn1 {
+    display: inline-block;
+    background-color: #0055b9;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.signup-btn:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.signup-btn1:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Pricing */
+
+.pricing {
+    height : 100vh;
+    text-align: center;
+    padding: 15% ;
+}
+
+.pricing h2{
+    color: #000000;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.pricing-image {
+    position: fixed; /* Use fixed positioning to keep it in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire width */
+    height: 100%; /* Cover the entire height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+    z-index: -1; /* Send the image to the back */
+}
+
+
+.text-box {
+    position: absolute; /* Position relative to the parent container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift back to the center */
+    background-color: rgba(255, 255, 255, 0.758); /* Black background with 70% opacity */
+    padding: 60px; /* Space inside the box */
+    border-radius: 20px; /* Rounded corners */
+    max-width: 1000px; /* Optional: limit the width of the text box */
+    text-align: center; /* Center the text */
+}
+
+.review-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Form Styles */
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 10px 0;
+    border-top: 2px solid #1a1a1a;
+}
+
+legend {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Buttons */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.submit-btn,
+.reset-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #0055b9;
+    color: white;
+}
+
+.reset-btn {
+    background-color: #cccccc;
+    color: #333;
+}
+
+.submit-btn:hover {
+    background-color: #0044a5;
+}
+
+.reset-btn:hover {
+    background-color: #b3b3b3;
+}
+
+.review-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 800px;
+    margin-top: 10%;
+}
+
+.review-section h1 {
+    color: #0055b9;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.review-section p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.review-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.review-buttons .review-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    background-color: #0055b9;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.review-buttons .review-btn:hover {
+    background-color: #000000;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.gym-name {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+.signup-link {
+    background-color: #0055b9;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.signup-link:hover {
+    background-color: #0055b9;
+}
+
+/* Form Container - Aligned to the Left */
+.register-container {
+    justify-content: flex-start; /* Aligns form to the left */
+}
+
+/* Form Box */
+.signup-form {
+    margin-left: 1%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 115px ;
+    border-radius: 20px;
+    width: 600px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.signup-form h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0055b9;
+    text-transform: uppercase;
+}
+
+/* Form Fields */
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-field input:focus {
+    border-color:#0055b9;
+    background-color: #fff;
+}
+
+.form-field input::placeholder {
+    color: #888;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: #0055b9;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color:#0055b9;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    background-color:#0055b9;
+}
+
+/* Sign-in Link */
+.signin-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.signin-link a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signin-link a:hover {
+    color: #0055b9;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 650px) {
+    .signup-form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .signup-form h1 {
+        font-size: 22px;
+    }
+
+    .form-field input {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+
+    .register-container {
+        padding-left: 20px;
+    }
+}
