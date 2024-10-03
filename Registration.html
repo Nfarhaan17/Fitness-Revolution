@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Fitness Revolution</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="image/FR.png" alt="Gym Logo" class="logo-image">
+                <span class="brand-name">Fitness Revolution</span>
+            </div>
+            <ul class="choice">
+                <li><a href="Homepage.html" >Homepage</a></li>
+                <li><a href="#">Coaches</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="Review.html">Review</a></li>
+                <li><a href="Pricing.html">Pricing</a></li>
+                <li><a href="#">Free trial</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+           
+        </nav>
+    </header>
+    
+    <main class="register-container"></main>
+    <div>
+        <img src = "image\login.webp"  alt = "pricing background" class = "pricing-image">
+    </div>
+        <div class="signup-form">
+            <h1>Register Your Account</h1>
+            <form action="Registration.php" method="post" id="registrationForm">
+                <div class="form-field">
+                    <input type="text" id="full-name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-field">
+                    <input type="email" id="email-address" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-field">
+                    <input type="number" id="phonenumber" name="phonenumber" placeholder="Phone Number" required>
+                </div>
+                <div class="form-field">
+                    <input type="password" id="user-password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="signin-link">Already a member? <a href="#">Log in</a></p>
+            </form>
+            <script>
+                window.onload = function() {
+                    document.getElementById("registrationForm").reset();
+                };
+            </script>
+        </div>
+    </main>
+</body>
+</html>
+
