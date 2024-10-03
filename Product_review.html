@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Product</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateProductForm() {
+            var productComment = document.getElementById("product_comment").value;
+
+            // Check if product comment is empty
+            if (productComment.trim() === "") {
+                alert("Please write a comment about the product.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="review-container">
+        <h1>PLEASE REVIEW THE PRODUCT</h1>
+        <h2>GIVE GENUINE FEEDBACK</h2>
+
+        <!-- Product Review Form -->
+        <form action="submit_product_review.php" method="POST" class="review-form" onsubmit="return validateProductForm()">
+            <!-- Personal Details Section -->
+            <fieldset class="personal-details">
+                <legend>Personal Details</legend>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label>Title:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="title" value="Male" required> Male</label>
+                        <label><input type="radio" name="title" value="Female" required> Female</label>
+                        <label><input type="radio" name="title" value="Other" required> Other</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Product Feedback Section -->
+            <fieldset class="product-details">
+                <legend>Product Feedback</legend>
+                <div class="input-group">
+                    <label for="product">Product:</label>
+                    <select id="product" name="product">
+                        <option value="" disabled selected>Select a product</option>
+                        <option value="Protein Powder">Protein Powder</option>
+                        <option value="Fitness Band">Fitness Band</option>
+                        <option value="Yoga Mat">Yoga Mat</option>
+                        <option value="Dumbbells">Dumbbells</option>
+                        <option value="Shaker Bottle">Shaker Bottle</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="product_rating">Rate Product (1 to 10):</label>
+                    <input type="number" id="product_rating" name="product_rating" min="1" max="10" required>
+                </div>
+                <div class="input-group">
+                    <label for="product_comment">Comment on Product:</label>
+                    <textarea id="product_comment" name="product_comment" rows="5"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Submit Buttons -->
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
